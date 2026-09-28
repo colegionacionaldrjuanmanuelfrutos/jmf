@@ -1331,3 +1331,118 @@ section {
     align-items: center;
     justify-content: center;
 }
+
+/* =========================
+   ADAPTACIÓN PARA CELULARES
+========================= */
+
+@media (max-width: 768px) {
+
+    /* ENCABEZADO */
+    header {
+        padding: 12px 20px;
+        flex-wrap: wrap;
+    }
+
+    .logo img {
+        width: 45px;
+    }
+
+    .logo h2 {
+        font-size: 16px;
+    }
+
+    .logo span {
+        font-size: 11px;
+    }
+
+    /* MENÚ */
+    nav {
+        width: 100%;
+    }
+
+    /* PORTADA */
+    .hero {
+        min-height: 100vh;
+        padding: 100px 20px 40px;
+    }
+
+    .contenido h1 {
+        font-size: 40px;
+    }
+
+    .contenido p {
+        font-size: 17px;
+    }
+
+    .boton {
+        padding: 12px 25px;
+    }
+
+    /* TARJETAS */
+    .elegirnos,
+    .niveles,
+    .estadisticas,
+    .contacto,
+    .galeria,
+    .noticias {
+        padding: 60px 20px;
+    }
+
+    /* TÍTULOS */
+    .titulo-seccion h2 {
+        font-size: 28px;
+    }
+
+    /* HISTORIA */
+    .historia {
+        grid-template-columns: 1fr;
+        padding: 70px 20px;
+    }
+
+    /* NIVELES */
+    .niveles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* CONTACTO */
+    .contacto-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* MAPA */
+    .mapa iframe {
+        height: 300px;
+    }
+
+    /* GALERÍA */
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-grid img {
+        height: 250px;
+    }
+
+    /* NOTICIAS */
+    .noticias-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* ESTADÍSTICAS */
+    .estadisticas-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* BUSCADOR */
+    .buscador {
+        width: 100%;
+        margin: 10px 0 0;
+        justify-content: center;
+    }
+
+    .buscador input {
+        width: 200px;
+    }
+
+}
