@@ -210,7 +210,7 @@ function cerrarChat(){
 
 const botonArriba = document.getElementById("volverArriba");
 
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", () => {
 
     if (window.scrollY > 400) {
         botonArriba.style.display = "flex";
@@ -220,13 +220,14 @@ window.addEventListener("scroll", function () {
 
 });
 
-
-botonArriba.addEventListener("click", function () {
+botonArriba.addEventListener("click", () => {
 
     window.scrollTo({
         top: 0,
         behavior: "smooth"
     });
+
+});
 
 });
 
