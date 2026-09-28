@@ -1278,23 +1278,6 @@ nav a:hover{
 
 }
 
-#volverArriba {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    width: 55px;
-    height: 55px;
-    border: none;
-    border-radius: 50%;
-    background: #0b1f3a;
-    color: white;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 99999;
-    box-shadow: 0 5px 15px rgba(0,0,0,.4);
-}
-
 /* ESPACIO PARA EL ENCABEZADO FIJO */
 
 section {
@@ -1321,7 +1304,30 @@ section {
 }
 
 #volverArriba {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+    width: 55px;
+    height: 55px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #0b1f3a;
+    color: white;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    z-index: 99999;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,.4);
+
     display: none;
+
     align-items: center;
     justify-content: center;
 }
