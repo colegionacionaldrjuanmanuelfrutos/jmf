@@ -208,26 +208,33 @@ function cerrarChat(){
 // BOTÓN VOLVER ARRIBA
 // =========================
 
-const botonArriba = document.getElementById("volverArriba");
+document.addEventListener("DOMContentLoaded", () => {
 
-window.addEventListener("scroll", () => {
+    const botonArriba = document.getElementById("volverArriba");
 
-    if (window.scrollY > 400) {
-        botonArriba.style.display = "flex";
-    } else {
-        botonArriba.style.display = "none";
-    }
+    if (!botonArriba) return;
 
-});
+    window.addEventListener("scroll", () => {
 
-botonArriba.addEventListener("click", () => {
+        if (window.scrollY > 400) {
 
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+            botonArriba.style.display = "flex";
+
+        } else {
+
+            botonArriba.style.display = "none";
+
+        }
+
+    });
+
+    botonArriba.addEventListener("click", () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
     });
 
 });
-
-});
-
