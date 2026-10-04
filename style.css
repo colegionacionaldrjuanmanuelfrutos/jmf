@@ -1958,72 +1958,108 @@ scroll-margin-top: 100px;
 DISEÑO RESPONSIVE
 Colegio Nacional Dr. Juan Manuel Frutos
 ========================================================= */
-
 /* =========================================================
-TABLETS
+VERSIÓN DE ESCRITORIO
 ========================================================= */
 
-@media (max-width: 1024px) {
+@media (min-width: 769px) {
 
 header {
-    padding: 15px 5%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.logo img {
-    width: 52px;
+.menu-toggle {
+    display: none !important;
 }
 
-.logo h2 {
-    font-size: 19px;
-}
+nav {
+    display: flex !important;
 
-.logo span {
-    font-size: 12px;
+    position: static;
+
+    width: auto;
+
+    padding: 0;
+
+    background: transparent;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    flex-direction: row;
 }
 
 nav a {
-    margin-left: 15px;
-    font-size: 14px;
+    display: inline-block;
+
+    width: auto;
+
+    margin-left: 25px;
+
+    padding: 0;
+
+    border: none;
+
+    font-size: 15px;
 }
 
 .buscador {
-    margin-left: 10px;
+    display: flex;
+    align-items: center;
 }
 
-.buscador input {
-    width: 100px;
+.logo {
+    flex-shrink: 0;
 }
 
-.contenido h1 {
-    font-size: 55px;
+.buscador {
+    flex-shrink: 0;
 }
 
-.contenido p {
-    font-size: 20px;
+
+/* BOTONES FLOTANTES */
+
+#juanma-boton {
+    position: fixed !important;
+
+    right: 20px !important;
+    bottom: 90px !important;
+
+    width: 65px;
+    height: 65px;
 }
 
-.explora-contenedor {
-    grid-template-columns: repeat(2, 1fr);
+#chatbot {
+    position: fixed !important;
+
+    right: 20px !important;
+    bottom: 170px !important;
+
+    width: 320px;
 }
 
-.historia {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 80px 5%;
+#volverArriba {
+    position: fixed !important;
+
+    right: 20px !important;
+    bottom: 20px !important;
+
+    width: 55px;
+    height: 55px;
 }
 
-.niveles,
-.estadisticas,
-.contacto,
-.galeria,
-.noticias,
-.elegirnos,
-.explora {
-    padding-left: 5%;
-    padding-right: 5%;
+.whatsapp-btn {
+    position: fixed !important;
+
+    left: 25px !important;
+    bottom: 25px !important;
 }
 
 }
-
 /* =========================================================
 CELULARES
 ========================================================= */
