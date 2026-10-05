@@ -42,13 +42,15 @@ header {
 
     width: 100%;
 
+    min-height: 75px;
+
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 
-    padding: 18px 8%;
+    padding: 12px 4%;
 
-    background: rgba(8, 25, 56, .90);
+    background: rgba(8, 25, 56, .95);
     backdrop-filter: blur(10px);
 
     z-index: 9999;
@@ -57,40 +59,52 @@ header {
 .logo {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
+
     flex-shrink: 0;
 }
 
 .logo img {
-    width: 60px;
+    width: 55px;
+    height: auto;
 }
 
 .logo h2 {
-    color: #fff;
-    font-size: 22px;
+    color: white;
+    font-size: 20px;
+    line-height: 1.2;
 }
 
 .logo span {
     color: #d9b24c;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 
-/* MENÚ */
+/* =========================================================
+   MENÚ DE ESCRITORIO
+========================================================= */
 
 nav {
     display: flex;
     align-items: center;
-    flex-direction: row;
+    justify-content: center;
+
+    flex: 1;
+
+    margin-left: 20px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
 
-    margin-left: 25px;
+    margin-left: 22px;
 
     font-weight: 500;
+    font-size: 15px;
+
+    white-space: nowrap;
 
     transition: .3s;
 }
@@ -99,22 +113,8 @@ nav a:hover {
     color: #d9b24c;
 }
 
-
-/* MENÚ HAMBURGUESA */
-
 .menu-toggle {
     display: none;
-
-    align-items: center;
-    justify-content: center;
-
-    width: 42px;
-    height: 42px;
-
-    color: white;
-    font-size: 28px;
-
-    cursor: pointer;
 }
 
 
@@ -132,9 +132,9 @@ nav a:hover {
 }
 
 .buscador input {
-    width: 120px;
+    width: 105px;
 
-    padding: 8px 12px;
+    padding: 8px 10px;
 
     border: none;
     outline: none;
@@ -143,7 +143,7 @@ nav a:hover {
 }
 
 .buscador button {
-    padding: 8px 12px;
+    padding: 8px 11px;
 
     border: none;
 
@@ -167,6 +167,7 @@ nav a:hover {
 .hero {
     width: 100%;
     height: 100vh;
+    min-height: 600px;
 
     background-image: url("img/portada.png");
     background-position: center center;
@@ -193,10 +194,12 @@ nav a:hover {
     position: relative;
     z-index: 2;
 
+    color: white;
+
     width: 100%;
     max-width: 900px;
 
-    color: white;
+    padding: 20px;
 }
 
 .contenido h1 {
@@ -233,70 +236,12 @@ nav a:hover {
 
 
 /* =========================================================
-   ¿POR QUÉ ELEGIRNOS?
-========================================================= */
-
-.elegirnos {
-    padding: 90px 8%;
-    background: #f8f9fc;
-}
-
-.elegirnos-grid {
-    display: grid;
-
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-
-    gap: 30px;
-
-    margin-top: 40px;
-}
-
-.elegir-card {
-    background: white;
-
-    padding: 35px;
-
-    border-radius: 18px;
-
-    text-align: center;
-
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
-
-    transition: .35s;
-}
-
-.elegir-card:hover {
-    transform: translateY(-10px);
-}
-
-.elegir-card i {
-    font-size: 55px;
-
-    color: #d9b24c;
-
-    margin-bottom: 20px;
-}
-
-.elegir-card h3 {
-    color: #0b1f3a;
-
-    margin-bottom: 15px;
-}
-
-.elegir-card p {
-    color: #666;
-
-    line-height: 1.8;
-}
-
-
-/* =========================================================
-   TÍTULOS DE SECCIÓN
+   TÍTULOS
 ========================================================= */
 
 .titulo-seccion {
     width: 100%;
-    max-width: 750px;
+    max-width: 850px;
 
     text-align: center;
 
@@ -327,7 +272,67 @@ nav a:hover {
 
     border-radius: 20px;
 
-    margin: 10px auto 20px;
+    margin: 15px auto 20px;
+}
+
+
+/* =========================================================
+   ¿POR QUÉ ELEGIRNOS?
+========================================================= */
+
+.elegirnos {
+    padding: 90px 7%;
+    background: #f8f9fc;
+}
+
+.elegirnos-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+.elegir-card {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+
+    transition: .35s;
+}
+
+.elegir-card:hover {
+    transform: translateY(-10px);
+}
+
+.elegir-card i {
+    font-size: 55px;
+
+    color: #d9b24c;
+
+    margin-bottom: 20px;
+}
+
+.elegir-card h3 {
+    color: #0b1f3a;
+
+    margin-bottom: 15px;
+}
+
+.elegir-card p {
+    color: #666;
+
+    line-height: 1.8;
 }
 
 
@@ -336,7 +341,7 @@ nav a:hover {
 ========================================================= */
 
 .historia {
-    padding: 100px 8%;
+    padding: 100px 7%;
 
     background: #f8f9fb;
 
@@ -354,7 +359,7 @@ nav a:hover {
 
     padding: 30px;
 
-    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
 
     transition: .4s;
 }
@@ -391,7 +396,7 @@ nav a:hover {
 ========================================================= */
 
 .explora {
-    padding: 90px 8%;
+    padding: 90px 7%;
 
     background: #f5f7fb;
 
@@ -405,7 +410,7 @@ nav a:hover {
 
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 
     gap: 25px;
 }
@@ -417,7 +422,7 @@ nav a:hover {
 
     border-radius: 15px;
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
 
     transition: .3s;
 }
@@ -425,7 +430,7 @@ nav a:hover {
 .explora-card:hover {
     transform: translateY(-8px);
 
-    box-shadow: 0 15px 30px rgba(0, 0, 0, .15);
+    box-shadow: 0 15px 30px rgba(0,0,0,.15);
 }
 
 .explora-icono {
@@ -470,17 +475,21 @@ nav a:hover {
 ========================================================= */
 
 .niveles {
-    background: #ffffff;
+    background: white;
 
-    padding: 80px 8%;
+    padding: 80px 7%;
 }
 
 .niveles-grid {
     display: grid;
 
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
 
     gap: 30px;
+
+    max-width: 1100px;
+
+    margin: auto;
 }
 
 .nivel-card {
@@ -490,7 +499,7 @@ nav a:hover {
 
     padding: 30px;
 
-    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
 }
 
 .nivel-card h3 {
@@ -503,8 +512,6 @@ nav a:hover {
     line-height: 1.8;
 
     color: #555;
-
-    margin-bottom: 10px;
 }
 
 .nivel-card ul {
@@ -523,7 +530,7 @@ nav a:hover {
 ========================================================= */
 
 .estadisticas {
-    padding: 80px 8%;
+    padding: 80px 7%;
 
     background: #f5f7fb;
 }
@@ -531,9 +538,13 @@ nav a:hover {
 .estadisticas-grid {
     display: grid;
 
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
 
     gap: 25px;
+
+    max-width: 1100px;
+
+    margin: auto;
 }
 
 .stat-card {
@@ -582,7 +593,7 @@ nav a:hover {
 ========================================================= */
 
 .contacto {
-    padding: 80px 8%;
+    padding: 80px 7%;
 
     background: white;
 }
@@ -590,11 +601,15 @@ nav a:hover {
 .contacto-grid {
     display: grid;
 
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: 1fr 1fr;
 
     gap: 40px;
 
     align-items: center;
+
+    max-width: 1100px;
+
+    margin: auto;
 }
 
 .contacto-info {
@@ -619,14 +634,14 @@ nav a:hover {
     line-height: 1.8;
 }
 
+.mapa {
+    width: 100%;
+}
+
 .mapa iframe {
     width: 100%;
 
-    border: 0;
-
-    border-radius: 15px;
-
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
+    box-shadow: 0 10px 20px rgba(0,0,0,.15);
 }
 
 
@@ -635,7 +650,7 @@ nav a:hover {
 ========================================================= */
 
 .noticias {
-    padding: 80px 8%;
+    padding: 80px 7%;
 
     background: #f5f7fb;
 }
@@ -643,9 +658,13 @@ nav a:hover {
 .noticias-grid {
     display: grid;
 
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
 
     gap: 30px;
+
+    max-width: 1100px;
+
+    margin: auto;
 }
 
 .noticia-card {
@@ -655,7 +674,7 @@ nav a:hover {
 
     overflow: hidden;
 
-    box-shadow: 0 10px 25px rgba(0, 0, 0, .1);
+    box-shadow: 0 10px 25px rgba(0,0,0,.1);
 
     transition: .3s;
 }
@@ -685,6 +704,8 @@ nav a:hover {
 
 .noticia-contenido h3 {
     color: #0b1f3a;
+
+    margin-bottom: 10px;
 }
 
 .noticia-contenido p {
@@ -694,6 +715,10 @@ nav a:hover {
 }
 
 .noticia-contenido a {
+    display: inline-block;
+
+    margin-top: 10px;
+
     color: #d9b24c;
 
     text-decoration: none;
@@ -707,15 +732,19 @@ nav a:hover {
 ========================================================= */
 
 .galeria {
-    padding: 80px 8%;
+    padding: 80px 7%;
 
     background: #f5f7fb;
 }
 
 .galeria-grid {
+    max-width: 1150px;
+
+    margin: auto;
+
     display: grid;
 
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
 
     gap: 20px;
 }
@@ -733,11 +762,11 @@ nav a:hover {
 
     cursor: pointer;
 
-    box-shadow: 0 8px 18px rgba(0, 0, 0, .15);
+    box-shadow: 0 8px 18px rgba(0,0,0,.15);
 }
 
 .galeria-grid img:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 
@@ -746,14 +775,18 @@ nav a:hover {
 ========================================================= */
 
 .footer {
-    background: #0b1f3a;
+    background: #081938;
 
     color: white;
 
-    padding: 60px 8% 25px;
+    padding: 60px 7% 25px;
 }
 
 .footer-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
@@ -762,9 +795,9 @@ nav a:hover {
 }
 
 .footer h3 {
-    margin-bottom: 15px;
-
     color: #d9b24c;
+
+    margin-bottom: 15px;
 }
 
 .footer p {
@@ -782,7 +815,7 @@ nav a:hover {
 .copy {
     text-align: center;
 
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .redes {
@@ -832,17 +865,15 @@ nav a:hover {
 
     text-decoration: none;
 
-    z-index: 9000;
+    z-index: 9997;
 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
+    box-shadow: 0 5px 20px rgba(0,0,0,.3);
 
     transition: .3s;
 }
 
 .whatsapp-btn:hover {
     transform: scale(1.1);
-
-    background: #20b957;
 }
 
 
@@ -871,16 +902,16 @@ nav a:hover {
 
     cursor: pointer;
 
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+    box-shadow: 0 5px 15px rgba(0,0,0,.3);
 
-    z-index: 9999;
-
-    transition: .3s;
+    z-index: 99999;
 
     display: flex;
 
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+
+    transition: .3s;
 }
 
 #juanma-boton:hover {
@@ -904,11 +935,11 @@ nav a:hover {
 
     border-radius: 15px;
 
-    box-shadow: 0 8px 30px rgba(0, 0, 0, .25);
-
     overflow: hidden;
 
-    z-index: 9998;
+    box-shadow: 0 8px 30px rgba(0,0,0,.3);
+
+    z-index: 99998;
 
     display: none;
 }
@@ -937,7 +968,7 @@ nav a:hover {
     position: absolute;
 
     right: 10px;
-    top: 6px;
+    top: 5px;
 
     background: none;
 
@@ -1004,7 +1035,7 @@ nav a:hover {
 
 
 /* =========================================================
-   BOTÓN VOLVER ARRIBA
+   VOLVER ARRIBA
 ========================================================= */
 
 #volverArriba {
@@ -1032,7 +1063,7 @@ nav a:hover {
 
     z-index: 99999;
 
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .4);
+    box-shadow: 0 5px 15px rgba(0,0,0,.4);
 
     display: none;
 
@@ -1042,77 +1073,51 @@ nav a:hover {
 
 
 /* =========================================================
-   NOTEBOOK / ESCRITORIO
+   TABLETS / NOTEBOOKS PEQUEÑAS
 ========================================================= */
 
-@media (min-width: 769px) {
+@media (max-width: 1100px) and (min-width: 769px) {
 
     header {
-        flex-wrap: nowrap;
+        padding: 12px 2.5%;
     }
 
-    nav {
-        display: flex;
-        position: static;
+    .logo img {
+        width: 48px;
+    }
 
-        width: auto;
+    .logo h2 {
+        font-size: 17px;
+    }
 
-        padding: 0;
-
-        background: transparent;
-
-        border-radius: 0;
-
-        box-shadow: none;
-
-        flex-direction: row;
+    .logo span {
+        font-size: 10px;
     }
 
     nav a {
-        display: inline-block;
+        margin-left: 13px;
 
-        width: auto;
-
-        margin-left: 25px;
-
-        padding: 0;
-
-        border: none;
-
-        font-size: 15px;
-    }
-
-    .menu-toggle {
-        display: none !important;
+        font-size: 13px;
     }
 
     .buscador {
-        display: flex;
+        margin-left: 10px;
     }
 
-    #juanma-boton {
-        right: 20px;
-        bottom: 90px;
-
-        width: 65px;
-        height: 65px;
+    .buscador input {
+        width: 85px;
     }
 
-    #chatbot {
-        right: 20px;
-        bottom: 170px;
-
-        width: 320px;
+    .explora-contenedor {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    #volverArriba {
-        right: 20px;
-        bottom: 20px;
+    .estadisticas-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .whatsapp-btn {
-        left: 25px;
-        bottom: 25px;
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -1151,7 +1156,6 @@ nav a:hover {
         display: flex;
 
         align-items: center;
-
         justify-content: space-between;
 
         flex-wrap: nowrap;
@@ -1205,7 +1209,6 @@ nav a:hover {
         display: flex;
 
         align-items: center;
-
         justify-content: center;
 
         width: 42px;
@@ -1214,6 +1217,8 @@ nav a:hover {
         flex-shrink: 0;
 
         font-size: 24px;
+
+        color: white;
 
         cursor: pointer;
     }
@@ -1234,11 +1239,13 @@ nav a:hover {
 
         border-radius: 12px;
 
-        box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+        box-shadow: 0 10px 30px rgba(0,0,0,.3);
 
         flex-direction: column;
 
         z-index: 10000;
+
+        margin: 0;
     }
 
     nav.activo {
@@ -1293,6 +1300,8 @@ nav a:hover {
         max-width: 500px;
 
         padding: 0 10px;
+
+        text-align: center;
     }
 
     .contenido h1 {
@@ -1569,12 +1578,6 @@ nav a:hover {
         grid-template-columns: 1fr;
 
         gap: 30px;
-
-        text-align: center;
-    }
-
-    .redes {
-        justify-content: center;
     }
 
 
@@ -1586,14 +1589,13 @@ nav a:hover {
         bottom: 20px;
 
         width: 52px;
-
         height: 52px;
 
         font-size: 27px;
     }
 
 
-    /* BOTÓN JUANMA */
+    /* JUANMA */
 
     #juanma-boton {
         right: 15px;
@@ -1601,20 +1603,13 @@ nav a:hover {
         bottom: 20px;
 
         width: 55px;
-
         height: 55px;
 
         font-size: 27px;
-
-        display: flex;
     }
-
-
-    /* CHATBOT */
 
     #chatbot {
         left: 10px;
-
         right: 10px;
 
         bottom: 85px;
@@ -1651,12 +1646,10 @@ nav a:hover {
         bottom: 85px;
 
         width: 48px;
-
         height: 48px;
 
         font-size: 24px;
     }
-
 }
 
 
@@ -1684,7 +1677,6 @@ nav a:hover {
 
     .menu-toggle {
         width: 38px;
-
         height: 38px;
 
         font-size: 22px;
@@ -1698,10 +1690,8 @@ nav a:hover {
         width: 210px;
     }
 
-
     .hero {
         padding-left: 15px;
-
         padding-right: 15px;
     }
 
@@ -1717,11 +1707,9 @@ nav a:hover {
         padding: 12px 22px;
     }
 
-
     .titulo-seccion h2 {
         font-size: 25px;
     }
-
 
     .elegirnos,
     .niveles,
@@ -1731,10 +1719,8 @@ nav a:hover {
     .noticias,
     .explora {
         padding-left: 15px;
-
         padding-right: 15px;
     }
-
 
     .estadisticas-grid {
         grid-template-columns: 1fr 1fr;
@@ -1758,27 +1744,9 @@ nav a:hover {
         font-size: 12px;
     }
 
-
-    /* JUANMA EN PANTALLAS PEQUEÑAS */
-
-    #juanma-boton {
-        right: 12px;
-
-        bottom: 18px;
-
-        width: 52px;
-
-        height: 52px;
-
-        font-size: 25px;
-    }
-
     #chatbot {
         left: 8px;
-
         right: 8px;
-
-        bottom: 78px;
 
         width: auto;
     }
@@ -1786,16 +1754,4 @@ nav a:hover {
     #chat-body {
         height: 260px;
     }
-
-
-    #volverArriba {
-        right: 12px;
-
-        bottom: 78px;
-
-        width: 46px;
-
-        height: 46px;
-    }
-
 }
